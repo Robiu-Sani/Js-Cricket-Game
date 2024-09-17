@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(213, 221, 223);
+}
+.BannerBody,.RollBox,.PlayHeaderBox,.resultBody{
+    width: 1100px;
+    height: 600px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgb(99, 98, 98);
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+    display: none;
+}
+.BannerBody{
+    background:url(images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.BannerBody img{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    box-shadow: 0px 10px 30px rgb(0, 114, 0),
+                inset 0px 0px 10px rgb(0, 17, 63);
+}
+.BannerBody h3{
+    text-transform: uppercase;
+    font-size: 4vw;
+    color: #fff;
+    text-shadow: 0px 0px 10px rgb(56, 56, 56);
+    margin-top: 150px;
+    text-align: center;
+}
+.BannerBody p{
+    margin: 30px 0px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0px 0px 10px rgb(65, 65, 65);
+    line-height: 25px;
+}
+.BannerBodyBtn{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.BannerBodyBtn button{
+    width: 170px;
+}
+.BannerBodyBtn button,.RollBoxBtn button{
+    padding: 15px;
+    background: rgb(213, 221, 223);
+    border: 1px solid rgb(107, 107, 107);
+    box-shadow:  inset 0px 0px 10px rgb(107, 107, 107);
+    border-radius: 25px;
+    font-size: 18px;
+    color: rgb(112, 112, 112);
+    transition: .2s;
+}
+.BannerBodyBtn button:nth-child(1):hover,.RollBoxBtn button:nth-child(1):hover{
+    background: rgb(18, 206, 118);
+    border: 1px solid rgba(44, 223, 98, 0.719);
+}
+.BannerBodyBtn button:hover,.RollBoxBtn button:hover{
+    background: rgba(29, 247, 255, 0.726);
+    border: 1px solid rgba(0, 217, 255, 0.719);
+    color: #fff;
+}
+.BannerBodyBtn button:active,.RollBoxBtn button:active{
+    font-size: 17px;
+}
+/* --------------------                    ------------ */
+.RollBox{
+    background: url(images/rolls.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.RollBox h2{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3vw;
+    margin-top: 150px;
+    text-align: right;
+    text-align: center;
+}
+.RollBox ol{
+    width: 100%;
+    margin-left: 15%;
+}
+.RollBox ol li{
+    font-size: 14px;
+    color: #fff;
+    line-height: 25px;
+    margin: 20px 0px 20px 0px;
+}
+.RollBoxBtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.RollBoxBtn button{
+    width: 200px;
+}
+/* --------------------                    ------------ */
+.alertBox{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.534);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.ComputerColl,.PlyerColl{
+    width: 550px;
+    height: 300px;
+    background: rgb(213, 221, 223);
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    display: none;
+}
+.ComputerColl h4,.PlyerColl h4{
+    text-transform: uppercase;
+    color: rgb(88, 88, 88);
+    font-size: 20px;
+    margin: 60px 0px 20px 0px;
+}
+.ComputerColl p,.PlyerColl p{
+    color: rgb(88, 88, 88);
+    margin: 10px;
+    text-align: center;
+}
+.alertBtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.alertBtn button{
+    width: 100px;
+    border: 1px solid rgb(154, 171, 175);
+    background: rgb(213, 221, 223);
+    padding: 10px;
+    color: rgb(107, 107, 107);
+    font-size: 14px;
+    border-radius: 5px;
+    transition: .3s;
+}
+.alertBtn button:hover{
+    box-shadow: 0px 10px 20px rgb(99, 98, 98);
+}
+.alertBtn button:active{
+    box-shadow: 0px 5px 10px rgb(99, 98, 98);
+}
+button{
+    cursor: pointer;
+}
+.cross,.back{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: rgb(71, 71, 71);
+    padding: 10px;
+    border: 1px solid rgba(187, 213, 224, 0);
+    border-radius: 10%;
+    font-size: 16px;
+}
+.cross:hover,.back:hover,.back1:hover{
+    border: 1px solid rgba(81, 146, 173, 0.185);
+}
+.cross:active,.back:active,.back1:active{
+    font-size: 15px;
+}
+.back1{
+    width: 40px;
+    height: 40px;
+    background: rgb(255, 255, 255);
+    border-radius: 100%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 150;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    border: 1px solid rgba(0, 23, 32, 0.459);
+}
+/* --------------------                    ------------ */
+.PlayHeaderBox{
+    display: flex;
+    justify-content: space-between;
+    display: none;
+    background: url(images/fildpic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.CountBox{
+    height: 100%;
+    flex-basis: 1;
+    width: 35%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Count{
+    width: 100%;
+    height: 48%;
+    border: 1px solid rgb(54, 107, 110);
+    padding: 20px;
+    overflow: hidden;
+}
+.Count h2{
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+    color: rgb(36, 63, 75);
+    margin-bottom: 40px;
+}
+.Calculate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.Calculate h1,.Calculate span{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(61, 72, 73);
+}
+.Calculate span{
+    font-weight: bold;
+}
+.PlayBox{
+    border: 1px solid rgb(54, 107, 110);
+    height: 540px;
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    width: 60%;
+}
+.PlayBox .select{
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%,0%);
+    z-index: 10;
+}
+.Fild{
+    width: 420px;
+    height: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.Fild img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    transition: .5s;
+}
+.FildBtn{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translate(-50%,0%);
+}
+.FildBtn button{
+    width: 120px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(78, 78, 78);
+    border-color: rgb(124, 124, 124);
+    box-shadow: 0px 10px 30px rgb(136, 136, 136);
+}
+.FildBtn button:active{
+    font-weight: 500;
+}
+/* --------------------                    ------------ */
+.resultpicAndWrite{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    padding: 30px;
+}
+.resultPic{
+    width: 300px;
+    margin: 0px 50px 0px 20px;
+}
+.resultPic img{
+    height: 100%;
+    margin: auto;
+}
+.resultWrite{
+    padding: 20px;
+    text-align: center;
+}
+.resultWrite p{
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 30px;
+    color: rgb(75, 75, 75);
+}
+.resultWrite h2{
+    text-transform: uppercase;
+    line-height: 40px;
+    color: rgb(75, 75, 75);
+}
+.resultWrite h1{
+    text-transform: uppercase;
+    color: rgb(41, 70, 71);
+    margin-top: 20px;
+}
+.resultBtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.resultBtn button{
+    width: 130px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(92, 92, 92);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 30px rgb(105, 105, 105);
+}
+.resultBtn button:active{
+    font-weight: 500;
+}
+.toss{
+    font-size: 20px;
+    border: 1px solid rgb(172, 172, 172);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(73, 73, 73);
+    cursor: pointer;
+    font-weight: bold;
+}
+.toss:active{
+    font-weight: 500;
+}
+.TossBody{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.144);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.TossDiv{
+    width: 250px;
+    height: 200px;
+    background: rgb(134, 197, 212);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 10px 30px #fff;
+}
+.cross1{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    padding: 5px;
+}
+.rolls{
+    width: 100px;
+    height: 100px;
+    background: url(images/logo.jpg);
+    border-radius: 100%;
+    margin-bottom: 25px;
+    background-size: cover;
+    animation: rotate 1s infinite;
+}
+@keyframes rotate{
+    100%{transform: rotatey(360deg);}
+}
+.tossBtn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.tossBtn button{
+    width: 100px;
+    padding: 3px;
+    border: 0;
+}
+.TossAns{
+    text-transform: uppercase;
+    font-size: 25px;
+    color: rgb(15, 52, 94);
+    position: absolute;
+    bottom: 20px;
+}
+/* ================= js class here ===================== */
+.active{
+    display: block;
+}
+.inactive{
+    display: none;
+}
